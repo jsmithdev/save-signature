@@ -11,6 +11,6 @@ public with sharing class UserSignatureTest {
 
         insert con;
         
-        UserSignature.saveAsDocumentOnRecord('test', con.Id);
+        UserSignature.saveAsDocumentOnRecord('BorderCollie', con.Id, '.txt');
     }
 }
