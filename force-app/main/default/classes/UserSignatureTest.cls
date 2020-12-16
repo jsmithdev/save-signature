@@ -2,7 +2,7 @@
 public with sharing class UserSignatureTest {
     
     @isTest
-    public static saveAsDocumentOnRecordTest() {
+    public static void saveAsDocumentOnRecordTest() {
 
         Contact con = new Contact(
             FirstName = 'Border',
