@@ -8,11 +8,11 @@ public with sharing class UserSignature {
         version.Title = 'Signature-'+System.now() +'.'+extension;
         version.PathOnClient = 'Signature-'+System.now() +'.'+extension;
         version.Origin = 'H';//C-Content Origin. H-Chatter Origin.
-        version.ContentLocation = 'S'; // S-Document is in Salesforce. E-Document is outside of Salesforce. L-Document is on a Social Netork.
+        version.ContentLocation = 'S'; // S-Document is in Salesforce. E-Document is outside of Salesforce. L-Document is on a Social Network
 
         insert version;
         
-        Id contentDocumentId = [SELECT ContentDocumentId FROM ContentVersion WHERE Id =:cVersion.Id].ContentDocumentId;
+        Id contentDocumentId = [SELECT ContentDocumentId FROM ContentVersion WHERE Id =:version.Id].ContentDocumentId;
         
         ContentDocumentLink link = new ContentDocumentLink();
         link.LinkedEntityId = recordId;
